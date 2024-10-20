@@ -17,21 +17,21 @@ from mysql.connector import errorcode
 # DB = os.environ.get("DATABASE")
 # SLL = os.environ.get("SSL_PATH")
 
-SERVER = os.getenv("SERVER_NAME")
-ADMIN = os.getenv("ADMIN_NAME")
-PWD = os.getenv("PWD")
-DB = os.getenv("DB_NAME")
-SLL_CA = os.getenv("SLL_CA")
+# SERVER = os.getenv("SERVER_NAME")
+# ADMIN = os.getenv("ADMIN_NAME")
+# PWD = os.getenv("PWD")
+# DB = os.getenv("DB_NAME")
+# SLL_CA = os.getenv("SLL_CA")
 
-# Obtain connection string information from the portal
-config = {
-    'host':f'{SERVER}.mysql.database.azure.com',
-    'user':f'{ADMIN}',
-    'password':f'{PWD}',
-    'database':f'{DB}',
-    'client_flags': [mysql.connector.ClientFlag.SSL],
-    'ssl_ca': f'{SLL_CA}'
-}
+# # Obtain connection string information from the portal
+# config = {
+#     'host':f'{SERVER}.mysql.database.azure.com',
+#     'user':f'{ADMIN}',
+#     'password':f'{PWD}',
+#     'database':f'{DB}',
+#     'client_flags': [mysql.connector.ClientFlag.SSL],
+#     'ssl_ca': f'{SLL_CA}'
+# }
 
 # ここからAPIの実装----------------------------------------------------------
 app = FastAPI(
