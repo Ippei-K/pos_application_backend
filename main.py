@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Query, HTTPException
 from pydantic import BaseModel
 from typing import Optional
+import os
 
 # Azure database for MySQLへの接続用のモジュールをインポート
 import mysql.connector
@@ -16,11 +17,11 @@ from mysql.connector import errorcode
 # DB = os.environ.get("DATABASE")
 # SLL = os.environ.get("SSL_PATH")
 
-SERVER = "xxx"
-ADMIN = "xxx"
-PWD = "xxx"
-DB = "xxx"
-SLL = "xxx"
+SERVER = os.getenv("SERVER_NAME")
+ADMIN = os.getenv("ADMIN_NAME")
+PWD = os.getenv("PWD")
+DB = os.getenv("DB_NAME")
+SLL_CA = os.getenv("SLL_CA")
 
 # Obtain connection string information from the portal
 config = {
@@ -29,7 +30,7 @@ config = {
     'password':f'{PWD}',
     'database':f'{DB}',
     'client_flags': [mysql.connector.ClientFlag.SSL],
-    'ssl_ca': f'{SLL}/DigiCertGlobalRootG2.crt.pem'
+    'ssl_ca': f'{SLL_CA}'
 }
 
 # ここからAPIの実装----------------------------------------------------------
