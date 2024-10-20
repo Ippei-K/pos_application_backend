@@ -1,1 +1,2 @@
 # pos_application_backend
+POSアプリのバックエンド用のリポジトリです。
