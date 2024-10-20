@@ -12,11 +12,11 @@ on:
 
 # 環境変数を設定
 env:
-  SERVER: ${{secrets.MYSQL_SERVER_NAME}}
-  ADMIN: ${{secrets.MYSQL_ADMIN_NAME}}
-  DB: ${{secrets.DATABASE_NAME}}
+  SERVER_NAME: ${{secrets.MYSQL_SERVER_NAME}}
+  ADMIN_NAME: ${{secrets.MYSQL_ADMIN_NAME}}
+  DB_NAME: ${{secrets.DATABASE_NAME}}
   PWD: ${{secrets.PASSWORD}}
-  SLL: ${{secrets.DIGICERT_ROOT_CA}}
+  SLL_CA: ${{secrets.DIGICERT_ROOT_CA}}
 
 jobs:
   build:
