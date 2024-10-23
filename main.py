@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Query, HTTPException
 from pydantic import BaseModel
-# from typing import List
-# import os
-# import datetime
+from typing import List
+import os
+import datetime
 
 # Azure database for MySQLへの接続用のモジュールをインポート
 import mysql.connector
