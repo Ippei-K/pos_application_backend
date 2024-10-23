@@ -5,8 +5,8 @@ from pydantic import BaseModel
 # import datetime
 
 # Azure database for MySQLへの接続用のモジュールをインポート
-# import mysql.connector
-# from mysql.connector import errorcode
+import mysql.connector
+from mysql.connector import errorcode
 
 # # .envファイルから環境変数を読み込む
 # dotenv_path = join(dirname(__file__), ".env")
