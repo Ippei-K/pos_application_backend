@@ -10,14 +10,6 @@ on:
       - main
   workflow_dispatch:
 
-# 環境変数を設定
-env:
-  SERVER_NAME: ${{secrets.MYSQL_SERVER_NAME}}
-  ADMIN_NAME: ${{secrets.MYSQL_ADMIN_NAME}}
-  DB_NAME: ${{secrets.DATABASE_NAME}}
-  PWD: ${{secrets.PASSWORD}}
-  SLL_CA: ${{secrets.DIGICERT_ROOT_CA}}
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -74,4 +66,4 @@ jobs:
         with:
           app-name: 'tech0-gen-7-step4-studentwebapp-pos-34'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_91DEE151809045199F78508F47069F83 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_048F1A5CB04847D59DDF686F9380CE44 }}
